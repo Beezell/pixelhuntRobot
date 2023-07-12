@@ -90,6 +90,7 @@ function fetchGameSteam() {
                     clearInterval(timeout);
                     console.log("interval cleared");
                     mongoose_1.default.disconnect();
+                    console.log("On ferme MongoDB à clef svp");
                     const endTime = Date.now();
                     calculateExecutionTime(startTime, endTime);
                 }
@@ -210,7 +211,6 @@ function display() {
         mongoose_1.default.connect(`mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PASSWORD}@${process.env.MONGO_HOST}/${process.env.MONGO_DB}`);
         console.log("Connexion à MongoDB avec le sourire !");
         yield fetchGameSteam();
-        console.log("On ferme MongoDB à clef svp");
     });
 }
 //Pour moi : pour savoir combien de temps ça met

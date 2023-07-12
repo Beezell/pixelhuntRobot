@@ -166,10 +166,6 @@ out
 .yarn/install-state.gz
 .pnp.\*
 
-# mes fichiers ts
-easyBotSteam.ts
-easyBotTwitch.ts
-
 # la config
 package-lock.json
 package.json
